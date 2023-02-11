@@ -1,0 +1,28 @@
+
+<div *ngFor="let a of listeArticles" >
+<div *ngIf="a.categorie!=='Travail'">
+<div *ngIf="a.categorie!=='Education'">
+<fieldset class="border p-4" >
+    <legend class="float-none w-auto">{{a.titre}}</legend>
+    <h5 class="card-title">{{a.titre}}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">{{a.auteur}}</h6>
+    <p class="card-text">{{a.contenu}}</p>
+    <a href="#" class="card-link">{{a.date}}</a>
+    <br>
+    <a href="#" class="card-link">{{a.categorie}}</a>
+</fieldset>
+</div>
+</div>
+<div *ngIf="a.categorie=='Education'" >
+    <fieldset  class="border p-4" style="background-color:rgba(0, 0, 255, 0.274) ;" >
+        <legend class="float-none w-auto">{{a.titre}}</legend>
+        <h5 class="card-title" >{{a.titre}}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">{{a.auteur}}</h6>
+        <p class="card-text">{{a.contenu}}</p>
+        <a href="#" class="card-link">{{a.date}}</a>
+        <br>
+        <a href="#" class="card-link">{{a.categorie}}</a>
+    </fieldset>
+    </div>
+</div>
+<input placeholder="{{number}}" (ngModelChange)="calc()">
